@@ -41,14 +41,13 @@ I published the _.env_ and _.env.example_ to git intentionally so that there wou
 
 I had some troubles with this endpoints: PUT and DELETE. 
 I changed a little bit back-end localy and all works nice.
-
-- DELETE: handleDeleteRequest
-Added type conversion for this condition: 
- - const targetTodoIndex = this.todos.findIndex((t) => Number(t._id) === Number(_id))
-instead of:
- - const targetTodoIndex = this.todos.findIndex((t) => t._id === _id);
-
 The problem was in  comparison  bettween string and number)
+
+- DELETE: handleDeleteRequest , 
+added type conversion for this condition: 
+ - const targetTodoIndex = this.todos.findIndex((t) => Number(t._id) === Number(_id))
+ -     instead of:
+ - const targetTodoIndex = this.todos.findIndex((t) => t._id === _id);
 
 - GET (by id ): handleGetByIdRequest , made the same  , Works properly
 
