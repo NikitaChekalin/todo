@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-
 import { AppShell } from '@mantine/core'
 
 import { Header } from '../header/Header'

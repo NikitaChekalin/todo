@@ -1,14 +1,18 @@
+import React from 'react'
 import { Box, Button, LoadingOverlay, Paper, Stack, Text, Title } from '@mantine/core'
 import { IconBug, IconReload } from '@tabler/icons-react'
-import React from 'react'
 
-interface Props {
+interface PageContainer {
   isLoading?: boolean
   errorStatus?: number | null
   children: React.ReactNode | Array<React.ReactNode>
 }
 
-export const PageContainer = ({ children, isLoading = false, errorStatus = null }: Props) => {
+export const PageContainer = ({
+  children,
+  isLoading = false,
+  errorStatus = null,
+}: PageContainer) => {
   const renderTitle = () => {
     switch (errorStatus) {
       case 500:

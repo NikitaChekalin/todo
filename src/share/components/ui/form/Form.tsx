@@ -1,8 +1,8 @@
-type FormProps = React.FormHTMLAttributes<HTMLFormElement> & {
+interface Form extends React.FormHTMLAttributes<HTMLFormElement> {
   onSubmit: () => void
 }
 
-export const Root = ({ children, onSubmit, ...rest }: FormProps) => (
+export const Root = ({ children, onSubmit, ...rest }: Form) => (
   <form
     autoComplete='off'
     onSubmit={(e) => {
@@ -14,4 +14,5 @@ export const Root = ({ children, onSubmit, ...rest }: FormProps) => (
     {children}
   </form>
 )
+
 export * from './Content'

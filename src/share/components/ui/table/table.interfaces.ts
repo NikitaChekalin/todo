@@ -1,5 +1,5 @@
-import { MantineSize } from '@mantine/core'
 import { ReactNode } from 'react'
+import { MantineSize } from '@mantine/core'
 
 export interface TableColumn {
   title: string
@@ -8,7 +8,7 @@ export interface TableColumn {
   key?: string
 }
 
-export interface TableProps {
+export interface CustomTableProps {
   columns: Array<TableColumn>
   children: ReactNode | Array<ReactNode>
   height?: number | string

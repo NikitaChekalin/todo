@@ -1,10 +1,12 @@
-import { Children } from '@share/@types'
 import { Stack } from '@mantine/core'
+
 import useStyles from './Form.styles'
 
-export type ContentProps = Children
+interface Content {
+  children: React.ReactNode
+}
 
-export const Content: React.FC<ContentProps> = ({ children }: ContentProps) => {
+export const Content = ({ children }: Content) => {
   const { classes } = useStyles()
 
   return (

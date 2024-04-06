@@ -1,16 +1,14 @@
-import { Group, Box, UnstyledButton } from '@mantine/core'
-
 import { Link } from 'react-router-dom'
+import { Box, Group, UnstyledButton } from '@mantine/core'
+
 import { useStyles } from './LinksGroup.styles'
 
-interface LinksGroupProps {
+interface LinksGroup {
   label: string
-  initiallyOpened?: boolean
-  links?: { label: string; link: string }
   link: string
 }
 
-export function LinksGroup({ label, link }: LinksGroupProps) {
+export const LinksGroup = ({ label, link }: LinksGroup) => {
   const { classes } = useStyles()
 
   return (

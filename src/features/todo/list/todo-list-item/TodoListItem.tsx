@@ -5,7 +5,7 @@ import { TableMenu } from '@share/components'
 interface TodoListItemProps {
   item: TodoItem
   onEdit: (id: string | number) => void
-  onDelete: (id: string | number) => void
+  onDelete: (id: string) => void
 }
 
 export const TodoListItem = ({ item, onEdit, onDelete }: TodoListItemProps) => (
@@ -20,7 +20,7 @@ export const TodoListItem = ({ item, onEdit, onDelete }: TodoListItemProps) => (
     <TableMenu
       title='Edit todo item'
       onEdit={() => onEdit(item?._id)}
-      onDelete={() => onDelete(item?._id)}
+      onDelete={() => onDelete(item?._id as string)}
     />
   </tr>
 )

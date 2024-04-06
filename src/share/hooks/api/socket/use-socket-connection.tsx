@@ -1,5 +1,5 @@
-import { SocketTodoProgressData, SocketEvents } from '@share/@types'
 import { useEffect, useState } from 'react'
+import { SocketEvents, SocketTodoProgressData } from '@share/@types'
 import { SocketApi } from '@share/services'
 
 export const useSocketConnection = () => {

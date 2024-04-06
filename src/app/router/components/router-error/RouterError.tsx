@@ -1,6 +1,6 @@
-import { isRouteErrorResponse, useRouteError } from 'react-router-dom'
-import { createStyles, Title, Text, Container, Center, MantineTheme } from '@mantine/core'
 import { FC } from 'react'
+import { isRouteErrorResponse, useRouteError } from 'react-router-dom'
+import { Center, Container, createStyles, MantineTheme, Text, Title } from '@mantine/core'
 
 const useStyles = createStyles((theme: MantineTheme) => ({
   label: {

@@ -1,14 +1,15 @@
 import { FC, useCallback, useMemo } from 'react'
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core'
 import { useLocalStorage } from '@mantine/hooks'
+import { ModalsProvider } from '@mantine/modals'
+import { Notifications } from '@mantine/notifications'
+import { NavigationProgress } from '@mantine/nprogress'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
-import { Notifications } from '@mantine/notifications'
-import { ModalsProvider } from '@mantine/modals'
-import { NavigationProgress } from '@mantine/nprogress'
-import { queryClient } from '../share/helpers/queryClient'
 import { themeConfig } from '../share/constants/mantine-theme'
+import { queryClient } from '../share/helpers/queryClient'
+
 import { Router } from './router/Router'
 
 import './App.css'

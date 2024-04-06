@@ -1,16 +1,15 @@
-import { FC } from 'react'
 import { Navbar, ScrollArea } from '@mantine/core'
-
 import { LAYOUT_SIZES } from '@share/constants'
-import { useSidebarStyles } from './styles'
-import { LinksGroup } from './share/ui'
-import { MENU_ITEMS } from './share/constants'
 
-interface IProps {
+import { MENU_ITEMS } from './share/constants'
+import { LinksGroup } from './share/ui'
+import { useSidebarStyles } from './styles'
+
+interface Sidebar {
   opened?: boolean
 }
 
-export const Sidebar: FC<IProps> = ({ opened = true }) => {
+export const Sidebar = ({ opened = true }: Sidebar) => {
   const { classes } = useSidebarStyles()
 
   return (

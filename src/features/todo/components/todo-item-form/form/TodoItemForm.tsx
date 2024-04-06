@@ -1,9 +1,9 @@
-import { TextInput } from '@mantine/core'
-
 import { Controller } from 'react-hook-form'
+import { TextInput } from '@mantine/core'
 import { TodoItem } from '@share/@types'
 import { Button, Form } from '@share/components'
 import { allowOnlyNumbers } from '@share/utils'
+
 import { useTodoForm } from '../hook/useTodoForm'
 
 interface TodoItemFormProps {

@@ -1,8 +1,8 @@
-import { CustomTable, PageContainer, PageHeader } from '@share/components'
-import { useSocketConnection, useGetTodos } from '@share/hooks/api'
-import { Button } from '@mantine/core'
-import { IconSquareRoundedPlus } from '@tabler/icons-react'
 import { TodoListItem, useTodoListPage } from '@features/todo'
+import { Button } from '@mantine/core'
+import { CustomTable, PageContainer, PageHeader } from '@share/components'
+import { useGetTodos, useSocketConnection } from '@share/hooks/api'
+import { IconSquareRoundedPlus } from '@tabler/icons-react'
 
 const TodoPageView = () => {
   const socketProgressData = useSocketConnection()

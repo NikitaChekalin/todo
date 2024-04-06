@@ -1,6 +1,6 @@
+import { useNavigate } from 'react-router-dom'
 import { ROUTER_BOOK } from '@app/router/routerBook'
 import { useDeleteTodoItemById } from '@share/hooks/api'
-import { useNavigate } from 'react-router-dom'
 
 const tableColumns = [
   { title: 'ID', key: 'id', width: '15%' },
@@ -16,7 +16,7 @@ export const useTodoListPage = () => {
 
   const onDelete = (id: string) => deleteTodoItem(id)
   const onCreate = () => navigate(ROUTER_BOOK.TODO.CREATE)
-  const onEdit = (id: string) => navigate(`${ROUTER_BOOK.TODO.INDEX}/${id}`)
+  const onEdit = (id: string | number) => navigate(`${ROUTER_BOOK.TODO.INDEX}/${id}`)
 
   return { tableColumns, onCreate, onEdit, onDelete }
 }

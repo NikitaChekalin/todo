@@ -1,6 +1,6 @@
 import { Button as MantineButton } from '@mantine/core'
 
-interface ButtonProps {
+interface Button {
   children: React.ReactNode
   disabled?: boolean
   type?: 'button' | 'submit' | 'reset'
@@ -17,7 +17,7 @@ export const Button = ({
   variant,
   style,
   ...props
-}: ButtonProps) => (
+}: Button) => (
   <MantineButton
     disabled={disabled}
     type={type}

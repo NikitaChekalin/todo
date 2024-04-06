@@ -1,24 +1,21 @@
-import { FC } from 'react'
-
 import {
   ActionIcon,
   Burger,
+  Group,
   Header as UIHeader,
   MediaQuery,
   Title,
   useMantineColorScheme,
   useMantineTheme,
-  Group,
 } from '@mantine/core'
-
 import { IconMoonStars, IconSun } from '@tabler/icons-react'
 
-interface IProps {
+interface Header {
   opened: boolean
   setOpened: (opened: boolean) => void
 }
 
-export const Header: FC<IProps> = ({ opened = true, setOpened }) => {
+export const Header = ({ opened = true, setOpened }: Header) => {
   const { toggleColorScheme } = useMantineColorScheme()
   const { colorScheme } = useMantineTheme()
   const darkTheme = colorScheme === 'dark'

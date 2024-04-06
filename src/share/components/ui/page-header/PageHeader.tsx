@@ -1,15 +1,16 @@
-import { Group, Title } from '@mantine/core'
 import { ReactNode } from 'react'
+import { Group, Title } from '@mantine/core'
 import { LAYOUT_SIZES } from '@share/constants'
+
 import { BackButton } from '../back-button/BackButton'
 
-interface Props {
+interface PageHeader {
   title: string
   backButton?: true | false | 'confirm'
   children?: ReactNode | Array<ReactNode>
 }
 
-export const PageHeader = ({ title, backButton = false, children }: Props) => (
+export const PageHeader = ({ title, backButton = false, children }: PageHeader) => (
   <Group
     noWrap
     align='center'

@@ -1,7 +1,7 @@
-import { ScrollArea, Table, Text } from '@mantine/core'
 import { useState } from 'react'
+import { ScrollArea, Table, Text } from '@mantine/core'
 
-import { TableProps } from './table.interfaces'
+import { CustomTableProps } from './table.interfaces'
 import useStyles from './table.utils'
 
 export const CustomTable = ({
@@ -14,7 +14,7 @@ export const CustomTable = ({
   striped = false,
   verticalSpacing = 'xs',
   horizontalSpacing = 'xs',
-}: TableProps) => {
+}: CustomTableProps) => {
   const { classes, cx } = useStyles()
   const [scrolled, setScrolled] = useState(false)
 

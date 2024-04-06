@@ -1,8 +1,8 @@
+import { TodoItem } from '@share/@types'
 import { API_TAGS } from '@share/constants'
 import { queryClient } from '@share/helpers'
-import { useMutation } from '@tanstack/react-query'
 import { updateTodoItemByIdRequest } from '@share/services'
-import { TodoItem } from '@share/@types'
+import { useMutation } from '@tanstack/react-query'
 
 export const useUpdateTodoItemById = () =>
   useMutation({

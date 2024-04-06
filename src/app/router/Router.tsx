@@ -1,10 +1,10 @@
-import { Suspense, lazy } from 'react'
-import { Navigate, Route, Routes, BrowserRouter } from 'react-router-dom'
-
+import { lazy, Suspense } from 'react'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Loader } from '@components/ui'
 import { MainLayout } from '@share/components/layouts'
-import { ROUTER_BOOK } from './routerBook'
+
 import { RouterError } from './components'
+import { ROUTER_BOOK } from './routerBook'
 
 const TodoViewPage = lazy(() => import('@pages/todo/page-view'))
 const TodoCreatePage = lazy(() => import('@pages/todo/page-create'))
