@@ -36,3 +36,20 @@ Time spent: 6h
 ### Comment
 
 I published the _.env_ and _.env.example_ to git intentionally so that there would be no problems at startup + no need to manually create the .env with data.
+
+# Back-end
+
+I had some troubles with this endpoints: PUT and DELETE. 
+I changed a little bit back-end localy and all works nice.
+
+DELETE: handleDeleteRequest
+Added type conversion for this condition: 
+const targetTodoIndex = this.todos.findIndex((t) => Number(t._id) === Number(_id))
+instead of:
+const targetTodoIndex = this.todos.findIndex((t) => t._id === _id);
+
+The problem was in  comparison  bettween string and number)
+
+GET (by id ): handleGetByIdRequest , made the same  , Works properly
+
+
