@@ -45,9 +45,9 @@ The problem was in  comparison  bettween string and number)
 
 - DELETE: handleDeleteRequest , 
 added type conversion for this condition: 
-  -     const targetTodoIndex = this.todos.findIndex((t) => Number(t._id) === Number(_id))
- - instead of:
- -     const targetTodoIndex = this.todos.findIndex((t) => t._id === _id);
+-     const targetTodoIndex = this.todos.findIndex((t) => Number(t._id) === Number(_id))
+- instead of:
+-     const targetTodoIndex = this.todos.findIndex((t) => t._id === _id);
 
 - GET (by id ): handleGetByIdRequest , made the same  , Works properly
 
