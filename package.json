@@ -12,7 +12,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
-    "pre-push": "npm run lint:js && npm run build",
+    "pre-push": "npm run lint && npm run build",
     "prettier": "prettier -w .",
     "prepare": "husky install"
   },
