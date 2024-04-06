@@ -12,7 +12,9 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
-    "prettier": "prettier -w ."
+    "pre-push": "npm run lint:js && npm run build",
+    "prettier": "prettier -w .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -59,6 +61,14 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "prettier": "^2.8.4",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "husky": "^8.0.0"
+  },
+  "config": {
+    "commit-message-validator": {
+      "_comment": "pattern can be Regex string or array of Regex string",
+      "pattern": "^(Build|Chore|Docs|Feature|Bugfix|Hotfix|Refactor|Revert|Style|Merge):s?.{1,150}$",
+      "errorMessage": "Invalid commit message format. It should contain (Build|Chore|Docs|Feature|Bugfix|Hotfix|Refactor|Revert|Style|Merge): message"
+    }
   }
 }
